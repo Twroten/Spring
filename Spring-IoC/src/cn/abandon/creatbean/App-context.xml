@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-lazy-init="false">
+
+    <bean id="cat1" class="cn.abandon.creatbean.constructor.Cat1"/>
+    <bean id="cat2" class="cn.abandon.creatbean.static_factory.Cat2Factory" factory-method="getInstance"/>
+    <bean id="cat3Factory" class="cn.abandon.creatbean.instance_factory.Cat3Factory"/>
+    <bean id="cat3" factory-bean="cat3Factory" factory-method="getInstance"/>
+    <bean id="cat4" class="cn.abandon.creatbean.factory_bean.Cat4Factory">
+        <property name="username" value="Anthony"/>
+    </bean>
+
+
+</beans>
